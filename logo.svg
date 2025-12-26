@@ -1,0 +1,30 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="20" y1="20" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <filter id="s" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded app tile -->
+  <rect x="18" y="18" width="104" height="104" rx="26" fill="url(#g)" filter="url(#s)"/>
+
+  <!-- Shield -->
+  <path d="M70 40
+           C63 45 56 47 50 49
+           V72
+           C50 86 59 98 70 102
+           C81 98 90 86 90 72
+           V49
+           C84 47 77 45 70 40Z"
+        fill="rgba(11,18,32,0.92)"/>
+
+  <!-- Envelope inside shield -->
+  <path d="M56 60H84V79H56V60Z" fill="rgba(255,255,255,0.14)"/>
+  <path d="M56 60L70 70L84 60" stroke="rgba(255,255,255,0.65)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 79L65 71" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M84 79L75 71" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round"/>
+</svg>
