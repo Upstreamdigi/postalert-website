@@ -9,9 +9,6 @@
 
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
-  <head>
-  ...
-  <link rel="stylesheet" href="./styles.css" />
 
   <!-- Privacy-friendly analytics by Plausible -->
   <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
@@ -19,8 +16,6 @@
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
     plausible.init()
   </script>
-</head>
-
 </head>
 
 <body>
@@ -48,7 +43,10 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="#signup">Join pilot</a>
+        <a class="btn primary" href="#signup"
+           onclick="plausible('Join Pilot Click')">
+          Join pilot
+        </a>
       </div>
 
     </div>
@@ -58,7 +56,7 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="section">
+  <section id="hero" class="section">
     <div class="wrap">
       <div class="card reveal">
         <div class="cardInner">
@@ -77,13 +75,22 @@
               </p>
 
               <div class="formActions">
-                <a class="btn primary" href="#signup">Join early access</a>
-                <a class="btn" href="how-it-works.html">How it works</a>
-                <a class="btn" href="partners.html">Partner with us</a>
+                <a class="btn primary" href="#signup"
+                   onclick="plausible('Join Pilot Click')">
+                  Join early access
+                </a>
+                <a class="btn" href="how-it-works.html"
+                   onclick="plausible('Nav Click', { props: { target: 'how-it-works' } })">
+                  How it works
+                </a>
+                <a class="btn" href="partners.html"
+                   onclick="plausible('Nav Click', { props: { target: 'partners' } })">
+                  Partner with us
+                </a>
               </div>
 
               <p class="mini">
-                We don’t open mail. We don’t forward mail. We help you act faster.
+                <b>Pilot phase:</b> We’re validating demand and carefully testing Mail Ping with early users before issuing QR codes.
               </p>
             </div>
 
@@ -122,7 +129,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="section tight">
+  <section id="features" class="section tight">
     <div class="wrap">
       <div class="grid3">
         <div class="feature reveal">
@@ -147,7 +154,7 @@
   </section>
 
   <!-- PROBLEM / SOLUTION -->
-  <section class="section">
+  <section id="problem" class="section">
     <div class="wrap">
       <div class="card reveal">
         <div class="cardInner">
@@ -184,9 +191,18 @@
           </div>
 
           <div class="formActions" style="margin-top:14px;">
-            <a class="btn" href="mailping.html">Explore Mail Ping</a>
-            <a class="btn" href="pricing.html">Pricing</a>
-            <a class="btn" href="faq.html">FAQ</a>
+            <a class="btn" href="mailping.html"
+               onclick="plausible('Nav Click', { props: { target: 'mailping' } })">
+              Explore Mail Ping
+            </a>
+            <a class="btn" href="pricing.html"
+               onclick="plausible('Nav Click', { props: { target: 'pricing' } })">
+              Pricing
+            </a>
+            <a class="btn" href="faq.html"
+               onclick="plausible('Nav Click', { props: { target: 'faq' } })">
+              FAQ
+            </a>
           </div>
         </div>
       </div>
@@ -194,7 +210,7 @@
   </section>
 
   <!-- WHO IT'S FOR -->
-  <section class="section tight">
+  <section id="who" class="section tight">
     <div class="wrap">
       <div class="card reveal">
         <div class="cardInner">
@@ -223,7 +239,9 @@
           </div>
 
           <div class="notice" style="margin-top:12px;">
-            <b>Partners:</b> See <a href="partners.html">For Agents</a> if you want to include PostAlert in move-in packs.
+            <b>Partners:</b> See <a href="partners.html"
+              onclick="plausible('Nav Click', { props: { target: 'partners' } })">For Agents</a>
+            if you want to include PostAlert in move-in packs.
           </div>
         </div>
       </div>
@@ -237,7 +255,8 @@
         <div class="cardInner">
           <h2 style="margin-top:0;">Join the pilot</h2>
           <p class="muted" style="margin:0 0 12px;">
-            Join the pilot to help shape PostAlert and start building real proof for sponsors.
+            This pilot helps us validate real demand and design Mail Ping properly.
+            Early users will be invited to test QR-based notifications in later stages.
           </p>
 
           <div class="tallyWrap" style="margin-top:12px;">
@@ -251,11 +270,16 @@
 
           <p class="fineprint" style="margin-top:10px;">
             If the form doesn’t load, open it here:
-            <a href="https://tally.so/r/GxKE6Z" target="_blank" rel="noreferrer">PostAlert pilot signup</a>.
+            <a href="https://tally.so/r/GxKE6Z" target="_blank" rel="noreferrer"
+               onclick="plausible('Outbound Click', { props: { target: 'tally' } })">
+              PostAlert pilot signup
+            </a>.
           </p>
 
           <div class="notice" style="margin-top:12px;">
-            <b>Privacy:</b> Read our <a href="privacy.html">Privacy Policy</a>. We don’t open mail and we don’t ask anyone to share letter contents.
+            <b>Privacy:</b> Read our <a href="privacy.html"
+              onclick="plausible('Nav Click', { props: { target: 'privacy' } })">Privacy Policy</a>.
+            We don’t open mail and we don’t ask anyone to share letter contents.
           </div>
 
         </div>
@@ -277,14 +301,14 @@
       </div>
 
       <div class="footLinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
+        <a href="how-it-works.html" onclick="plausible('Nav Click', { props: { target: 'how-it-works' } })">How it works</a>
+        <a href="mailping.html" onclick="plausible('Nav Click', { props: { target: 'mailping' } })">Mail Ping</a>
+        <a href="pricing.html" onclick="plausible('Nav Click', { props: { target: 'pricing' } })">Pricing</a>
+        <a href="partners.html" onclick="plausible('Nav Click', { props: { target: 'partners' } })">For Agents</a>
+        <a href="faq.html" onclick="plausible('Nav Click', { props: { target: 'faq' } })">FAQ</a>
+        <a href="privacy.html" onclick="plausible('Nav Click', { props: { target: 'privacy' } })">Privacy</a>
+        <a href="terms.html" onclick="plausible('Nav Click', { props: { target: 'terms' } })">Terms</a>
+        <a href="contact.html" onclick="plausible('Nav Click', { props: { target: 'contact' } })">Contact</a>
       </div>
     </div>
   </div>
@@ -292,8 +316,27 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Track section engagement (fires once per section when 50% visible)
+  document.addEventListener("DOMContentLoaded", function () {
+    const trackedSections = ['hero', 'features', 'problem', 'who', 'signup'];
+    const seen = {};
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.id && !seen[entry.target.id]) {
+          plausible('Viewed Section', { props: { section: entry.target.id } });
+          seen[entry.target.id] = true;
+        }
+      });
+    }, { threshold: 0.5 });
+
+    trackedSections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  });
 </script>
 
 </body>
 </html>
-
