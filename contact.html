@@ -1,109 +1,69 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — PostAlert</title>
-  <meta name="description" content="Contact PostAlert for pilot access, partnerships, sponsorship, or feedback." />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Contact PostAlert for pilot questions, partnerships or general enquiries." />
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Plausible Analytics -->
   <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
   <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
   </script>
 </head>
+
 <body>
-
-<a href="#main" class="skip-link">Skip to content</a>
-
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.svg" alt="PostAlert logo">
-        <div class="wordmark">
-          <span>Post</span><span class="alert">Alert</span>
-          <small>UK move-safe post alerts</small>
-        </div>
-      </a>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="PostAlert logo">
+      <span>Post<span class="alert">Alert</span></span>
+    </a>
 
-      <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-      </div>
-    </div>
+    <nav>
+      <a class="track-nav" data-target="home" href="index.html">Home</a>
+      <a class="track-nav" data-target="faq" href="faq.html">FAQ</a>
+      <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
-<main id="main">
-  <div class="wrap pageTitle">
-    <h1>Contact</h1>
-    <p>PostAlert is currently in pilot mode. We welcome feedback from movers, agents, and potential partners.</p>
-    <div class="notice">
-      <b>Email:</b> <a href="mailto:hello@postalert.co.uk" onclick="plausible('Email Click', { props: { mailbox: 'hello' } })">hello@postalert.co.uk</a>
-    </div>
+<main class="wrap page">
+  <h1>Contact PostAlert</h1>
+  <p>
+    We’d love to hear from you — whether you’re interested in the pilot,
+    partnerships, sponsorships or just want to learn more.
+  </p>
+
+  <div class="notice">
+    <strong>Email us directly:</strong><br>
+    <a class="track-email" href="mailto:hello@postalert.co.uk">
+      hello@postalert.co.uk
+    </a>
   </div>
 
-  <section class="prose">
-    <div class="wrap">
-      <div class="card reveal">
-        <div class="cardInner">
-          <h2 style="margin-top:0;">Send a message</h2>
-          <p class="muted">Tap a button below. Your email app will open with the subject pre-filled.</p>
-
-          <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary"
-               href="mailto:hello@postalert.co.uk?subject=PostAlert%20Pilot%20Access"
-               onclick="plausible('Email Click', { props: { mailbox: 'hello', type: 'pilot' } })">
-              Email for pilot
-            </a>
-
-            <a class="btn"
-               href="mailto:hello@postalert.co.uk?subject=PostAlert%20Partnership"
-               onclick="plausible('Email Click', { props: { mailbox: 'hello', type: 'partnership' } })">
-              Email for partnership
-            </a>
-
-            <a class="btn"
-               href="mailto:hello@postalert.co.uk?subject=PostAlert%20Feedback"
-               onclick="plausible('Email Click', { props: { mailbox: 'hello', type: 'feedback' } })">
-              General message
-            </a>
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </section>
+  <p class="muted">
+    We typically respond within 24–48 hours.
+  </p>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footGrid">
-      <div style="display:flex; gap:10px; align-items:flex-start;">
-        <img src="logo.svg" alt="PostAlert logo" width="28" height="28" style="border-radius:10px; opacity:.95;">
-        <div>PostAlert © <span id="year"></span><br>Built in the UK · Privacy-first</div>
-      </div>
-      <div class="footLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+    <p>PostAlert © <span id="year"></span> · Privacy-first</p>
   </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  if (window.plausible) {
+    document.querySelector(".track-email")?.addEventListener("click", () => {
+      plausible("Email Click");
+    });
+  }
+</script>
 </body>
 </html>
