@@ -34,19 +34,16 @@
       </a>
 
       <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <a class="track-nav" data-target="how-it-works" href="how-it-works.html">How it works</a>
+        <a class="track-nav" data-target="mailping" href="mailping.html">Mail Ping</a>
+        <a class="track-nav" data-target="pricing" href="pricing.html">Pricing</a>
+        <a class="track-nav" data-target="partners" href="partners.html">For Agents</a>
+        <a class="track-nav" data-target="faq" href="faq.html">FAQ</a>
+        <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="#signup"
-           onclick="plausible('Join Pilot Click')">
-          Join pilot
-        </a>
+        <a class="btn primary join-pilot" href="#signup">Join pilot</a>
       </div>
 
     </div>
@@ -75,18 +72,10 @@
               </p>
 
               <div class="formActions">
-                <a class="btn primary" href="#signup"
-                   onclick="plausible('Join Pilot Click')">
-                  Join early access
-                </a>
-                <a class="btn" href="how-it-works.html"
-                   onclick="plausible('Nav Click', { props: { target: 'how-it-works' } })">
-                  How it works
-                </a>
-                <a class="btn" href="partners.html"
-                   onclick="plausible('Nav Click', { props: { target: 'partners' } })">
-                  Partner with us
-                </a>
+                <a class="btn primary join-pilot" href="#signup">Join early access</a>
+
+                <a class="btn track-nav" data-target="how-it-works" href="how-it-works.html">How it works</a>
+                <a class="btn track-nav" data-target="partners" href="partners.html">Partner with us</a>
               </div>
 
               <p class="mini">
@@ -191,18 +180,9 @@
           </div>
 
           <div class="formActions" style="margin-top:14px;">
-            <a class="btn" href="mailping.html"
-               onclick="plausible('Nav Click', { props: { target: 'mailping' } })">
-              Explore Mail Ping
-            </a>
-            <a class="btn" href="pricing.html"
-               onclick="plausible('Nav Click', { props: { target: 'pricing' } })">
-              Pricing
-            </a>
-            <a class="btn" href="faq.html"
-               onclick="plausible('Nav Click', { props: { target: 'faq' } })">
-              FAQ
-            </a>
+            <a class="btn track-nav" data-target="mailping" href="mailping.html">Explore Mail Ping</a>
+            <a class="btn track-nav" data-target="pricing" href="pricing.html">Pricing</a>
+            <a class="btn track-nav" data-target="faq" href="faq.html">FAQ</a>
           </div>
         </div>
       </div>
@@ -239,8 +219,7 @@
           </div>
 
           <div class="notice" style="margin-top:12px;">
-            <b>Partners:</b> See <a href="partners.html"
-              onclick="plausible('Nav Click', { props: { target: 'partners' } })">For Agents</a>
+            <b>Partners:</b> See <a class="track-nav" data-target="partners" href="partners.html">For Agents</a>
             if you want to include PostAlert in move-in packs.
           </div>
         </div>
@@ -248,7 +227,7 @@
     </div>
   </section>
 
-  <!-- SIGNUP (TALLY) -->
+  <!-- SIGNUP -->
   <section id="signup" class="section">
     <div class="wrap">
       <div class="card reveal">
@@ -270,15 +249,13 @@
 
           <p class="fineprint" style="margin-top:10px;">
             If the form doesn’t load, open it here:
-            <a href="https://tally.so/r/GxKE6Z" target="_blank" rel="noreferrer"
-               onclick="plausible('Outbound Click', { props: { target: 'tally' } })">
+            <a class="track-outbound" data-target="tally" href="https://tally.so/r/GxKE6Z" target="_blank" rel="noreferrer">
               PostAlert pilot signup
             </a>.
           </p>
 
           <div class="notice" style="margin-top:12px;">
-            <b>Privacy:</b> Read our <a href="privacy.html"
-              onclick="plausible('Nav Click', { props: { target: 'privacy' } })">Privacy Policy</a>.
+            <b>Privacy:</b> Read our <a class="track-nav" data-target="privacy" href="privacy.html">Privacy Policy</a>.
             We don’t open mail and we don’t ask anyone to share letter contents.
           </div>
 
@@ -301,31 +278,58 @@
       </div>
 
       <div class="footLinks">
-        <a href="how-it-works.html" onclick="plausible('Nav Click', { props: { target: 'how-it-works' } })">How it works</a>
-        <a href="mailping.html" onclick="plausible('Nav Click', { props: { target: 'mailping' } })">Mail Ping</a>
-        <a href="pricing.html" onclick="plausible('Nav Click', { props: { target: 'pricing' } })">Pricing</a>
-        <a href="partners.html" onclick="plausible('Nav Click', { props: { target: 'partners' } })">For Agents</a>
-        <a href="faq.html" onclick="plausible('Nav Click', { props: { target: 'faq' } })">FAQ</a>
-        <a href="privacy.html" onclick="plausible('Nav Click', { props: { target: 'privacy' } })">Privacy</a>
-        <a href="terms.html" onclick="plausible('Nav Click', { props: { target: 'terms' } })">Terms</a>
-        <a href="contact.html" onclick="plausible('Nav Click', { props: { target: 'contact' } })">Contact</a>
+        <a class="track-nav" data-target="how-it-works" href="how-it-works.html">How it works</a>
+        <a class="track-nav" data-target="mailping" href="mailping.html">Mail Ping</a>
+        <a class="track-nav" data-target="pricing" href="pricing.html">Pricing</a>
+        <a class="track-nav" data-target="partners" href="partners.html">For Agents</a>
+        <a class="track-nav" data-target="faq" href="faq.html">FAQ</a>
+        <a class="track-nav" data-target="privacy" href="privacy.html">Privacy</a>
+        <a class="track-nav" data-target="terms" href="terms.html">Terms</a>
+        <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Robust event helpers
+  function track(eventName, props) {
+    if (window.plausible) plausible(eventName, props ? { props } : undefined);
+  }
+
+  // Track Join Pilot clicks reliably (no inline onclick)
+  document.querySelectorAll(".join-pilot").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      track("Join Pilot Click");
+    });
+  });
+
+  // Track nav clicks
+  document.querySelectorAll(".track-nav").forEach(function(link){
+    link.addEventListener("click", function(){
+      track("Nav Click", { target: link.dataset.target || link.getAttribute("href") });
+    });
+  });
+
+  // Track outbound clicks
+  document.querySelectorAll(".track-outbound").forEach(function(link){
+    link.addEventListener("click", function(){
+      track("Outbound Click", { target: link.dataset.target || link.getAttribute("href") });
+    });
+  });
+
   // Track section engagement (fires once per section when 50% visible)
-  document.addEventListener("DOMContentLoaded", function () {
+  (function () {
     const trackedSections = ['hero', 'features', 'problem', 'who', 'signup'];
     const seen = {};
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting && entry.target.id && !seen[entry.target.id]) {
-          plausible('Viewed Section', { props: { section: entry.target.id } });
+          track("Viewed Section", { section: entry.target.id });
           seen[entry.target.id] = true;
         }
       });
@@ -335,7 +339,7 @@
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
-  });
+  })();
 </script>
 
 </body>
