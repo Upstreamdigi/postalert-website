@@ -1,119 +1,67 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mail Ping — PostAlert</title>
-  <meta name="description" content="Mail Ping is a privacy-first way for a new occupant to notify you when mail still arrives at your old address — no sign-up." />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Mail Ping lets new occupants notify you when mail arrives at your old address." />
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Plausible -->
   <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
   <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
   </script>
 </head>
+
 <body>
-
-<a href="#main" class="skip-link">Skip to content</a>
-
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.svg" alt="PostAlert logo">
-        <div class="wordmark">
-          <span>Post</span><span class="alert">Alert</span>
-          <small>UK move-safe post alerts</small>
-        </div>
-      </a>
-
-      <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-      </div>
-    </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="PostAlert logo">
+      <span>Post<span class="alert">Alert</span></span>
+    </a>
   </div>
 </header>
 
-<main id="main">
-  <div class="wrap pageTitle">
-    <h1>Mail Ping</h1>
-    <p>
-      Mail Ping is designed to make “doing the right thing” effortless.
-      New occupants can notify you that post arrived — without signing up.
-    </p>
-    <div class="notice">
-      <b>Pilot status:</b> Mail Ping is being validated. QR codes will be issued to selected pilot users once live testing begins.
-    </div>
+<main class="wrap page">
+  <h1>Mail Ping</h1>
+
+  <p>
+    Mail Ping is a simple way for new occupants to notify you
+    when important post arrives at your old address.
+  </p>
+
+  <div class="notice">
+    <strong>How it works:</strong>
+    <ol>
+      <li>You leave a QR card when moving out</li>
+      <li>New occupant scans the code</li>
+      <li>You receive an alert and act fast</li>
+    </ol>
   </div>
 
-  <section class="prose">
-    <div class="wrap">
-      <div class="card reveal">
-        <div class="cardInner">
+  <p class="muted">
+    No sign-ups for the new occupant. No mail is opened.
+  </p>
 
-          <h2 style="margin-top:0;">Why it exists</h2>
-          <p>
-            In real life, people don’t return mail to sender consistently. It’s effort. It gets forgotten.
-            Mail Ping reduces the friction to almost zero.
-          </p>
-
-          <div class="split" style="margin-top:12px;">
-            <div class="notice" style="margin:0;">
-              <b>For the Leaver</b><br>
-              You get a quick alert when post arrives so you can update the sender before issues escalate.
-            </div>
-            <div class="notice" style="margin:0;">
-              <b>For the Joiner</b><br>
-              No sign-up needed. No pen. No postbox. Just scan and notify.
-            </div>
-          </div>
-
-          <h2 style="margin-top:18px;">Pilot roadmap</h2>
-          <ol style="color:var(--muted); padding-left: 18px; margin: 8px 0 14px;">
-            <li>Leaver leaves a PostAlert QR card at the old address</li>
-            <li>Joiner scans and taps notify (no account required)</li>
-            <li>Leaver gets an alert and updates the sender</li>
-          </ol>
-
-          <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-            <a class="btn" href="how-it-works.html" onclick="plausible('Nav Click', { props: { target: 'how-it-works' } })">How it works</a>
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </section>
+  <p class="formActions">
+    <a class="btn primary join-pilot" href="index.html#signup">Join the pilot</a>
+  </p>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footGrid">
-      <div style="display:flex; gap:10px; align-items:flex-start;">
-        <img src="logo.svg" alt="PostAlert logo" width="28" height="28" style="border-radius:10px; opacity:.95;">
-        <div>PostAlert © <span id="year"></span><br>Built in the UK · Privacy-first</div>
-      </div>
-      <div class="footLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+    <p>PostAlert © <span id="year"></span></p>
   </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelector(".join-pilot")?.addEventListener("click", () => {
+    if (window.plausible) plausible("Join Pilot Click");
+  });
+</script>
 </body>
 </html>
