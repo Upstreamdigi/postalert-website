@@ -4,9 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>How it works — PostAlert</title>
-  <meta name="description" content="How PostAlert works: checklist, reminders, and Mail Ping alerts to reduce missed-letter risk after moving in the UK." />
+  <meta name="description" content="How PostAlert works: checklist, reminders, and Mail Ping to reduce missed-letter risk after moving home in the UK." />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body>
 
@@ -15,7 +22,6 @@
 <header>
   <div class="wrap">
     <div class="nav">
-
       <a class="brand" href="index.html">
         <img src="logo.svg" alt="PostAlert logo">
         <div class="wordmark">
@@ -34,22 +40,21 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
       </div>
-
     </div>
   </div>
 </header>
 
 <main id="main">
   <div class="wrap pageTitle">
-    <h1>How PostAlert works</h1>
+    <h1>How it works</h1>
     <p>
-      PostAlert is built for real life. It helps you organise address updates, keep track of what’s done,
-      and reduce missed-letter risk after you move.
+      PostAlert is a privacy-first digital safety net that helps reduce missed-letter risk after moving.
+      Not mail forwarding — it’s organisation + reminders + optional Mail Ping alerts.
     </p>
     <div class="notice">
-      <b>Reminder:</b> We don’t open mail and we don’t forward mail.
+      <b>Pilot note:</b> We’re validating demand now. Mail Ping QR testing will roll out in controlled phases.
     </div>
   </div>
 
@@ -58,32 +63,34 @@
       <div class="card reveal">
         <div class="cardInner">
 
-          <h2 style="margin-top:0;">Step 1 — Add your move details</h2>
-          <p>Old address, new address, move date. PostAlert turns it into a clear action plan.</p>
-
-          <h2>Step 2 — Use the UK checklist</h2>
-          <p>Track the organisations people commonly forget:</p>
-          <ul>
-            <li>DVLA</li>
-            <li>Council tax</li>
-            <li>NHS / GP</li>
-            <li>Banks & insurers</li>
-            <li>Utilities & subscriptions</li>
-          </ul>
-
-          <h2>Step 3 — Turn on Mail Ping (optional)</h2>
+          <h2 style="margin-top:0;">1) You move (and admin starts)</h2>
           <p>
-            Leave a QR card behind. If post still arrives, the new occupant can notify you in seconds —
-            no sign-up, no hassle.
+            People update some organisations immediately and forget others. Important letters still arrive at old addresses.
+            That’s where stress and escalation happens.
           </p>
 
+          <h2>2) PostAlert helps you track what’s done</h2>
           <div class="notice">
-            <b>Why it works:</b> it removes friction, so people actually do it.
+            <b>Checklist + reminders</b><br>
+            Track DVLA, council, NHS/GP, banks, utilities and more. See what’s updated vs pending.
           </div>
 
-          <p style="margin-top:16px;" class="formActions">
-            <a class="btn primary" href="index.html#signup">Join pilot</a>
-            <a class="btn" href="mailping.html">Learn about Mail Ping</a>
+          <h2>3) If mail still arrives, Mail Ping can alert you</h2>
+          <div class="notice">
+            <b>Mail Ping (planned)</b><br>
+            New occupant scans a QR card and taps notify (no sign-up). You get an alert and act fast.
+          </div>
+
+          <h2>What PostAlert does NOT do</h2>
+          <ul>
+            <li>We don’t open mail</li>
+            <li>We don’t forward mail</li>
+            <li>We don’t ask for letter contents</li>
+          </ul>
+
+          <p class="formActions" style="margin-top:14px;">
+            <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join the pilot</a>
+            <a class="btn" href="mailping.html" onclick="plausible('Nav Click', { props: { target: 'mailping' } })">Explore Mail Ping</a>
           </p>
 
         </div>
