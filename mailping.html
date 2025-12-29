@@ -7,6 +7,13 @@
   <meta name="description" content="Mail Ping is a privacy-first way for a new occupant to notify you when mail still arrives at your old address — no sign-up." />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body>
 
@@ -33,7 +40,7 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
       </div>
     </div>
   </div>
@@ -47,7 +54,7 @@
       New occupants can notify you that post arrived — without signing up.
     </p>
     <div class="notice">
-      <b>Privacy-first:</b> We do not open mail and we never ask anyone to share letter contents.
+      <b>Pilot status:</b> Mail Ping is being validated. QR codes will be issued to selected pilot users once live testing begins.
     </div>
   </div>
 
@@ -56,40 +63,33 @@
       <div class="card reveal">
         <div class="cardInner">
 
-          <h2 style="margin-top:0;">The problem it solves</h2>
+          <h2 style="margin-top:0;">Why it exists</h2>
           <p>
-            People rarely return post to sender. Mail piles up. Deadlines pass.
-            Mail Ping reduces friction: scan → notify → done.
+            In real life, people don’t return mail to sender consistently. It’s effort. It gets forgotten.
+            Mail Ping reduces the friction to almost zero.
           </p>
 
           <div class="split" style="margin-top:12px;">
             <div class="notice" style="margin:0;">
               <b>For the Leaver</b><br>
-              Leave a QR card behind. If mail arrives, you get an alert and can update the sender quickly.
+              You get a quick alert when post arrives so you can update the sender before issues escalate.
             </div>
             <div class="notice" style="margin:0;">
               <b>For the Joiner</b><br>
-              No sign-up needed. No pen. No postbox. Just a quick notification to stop future clutter.
+              No sign-up needed. No pen. No postbox. Just scan and notify.
             </div>
           </div>
 
-          <h2 style="margin-top:18px;">What you receive</h2>
-          <div class="notice" style="margin-top:10px;">
-            <b>Mail detected: Council</b><br>
-            Old address · Today · Action: update address
-          </div>
-          <div class="notice" style="margin-top:10px;">
-            <b>Mail detected: DVLA</b><br>
-            Old address · Yesterday · Action: update records
-          </div>
+          <h2 style="margin-top:18px;">Pilot roadmap</h2>
+          <ol style="color:var(--muted); padding-left: 18px; margin: 8px 0 14px;">
+            <li>Leaver leaves a PostAlert QR card at the old address</li>
+            <li>Joiner scans and taps notify (no account required)</li>
+            <li>Leaver gets an alert and updates the sender</li>
+          </ol>
 
-          <div class="notice" style="margin-top:12px;">
-            <b>Note:</b> During pilot we can use “sender category selection” rather than any image scanning.
-          </div>
-
-          <p style="margin-top:16px;" class="formActions">
-            <a class="btn primary" href="index.html#signup">Join pilot</a>
-            <a class="btn" href="partners.html">For Agents</a>
+          <p class="formActions" style="margin-top:14px;">
+            <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
+            <a class="btn" href="how-it-works.html" onclick="plausible('Nav Click', { props: { target: 'how-it-works' } })">How it works</a>
           </p>
 
         </div>
