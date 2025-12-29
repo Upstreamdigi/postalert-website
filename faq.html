@@ -7,6 +7,13 @@
   <meta name="description" content="PostAlert FAQ. What it is, what it is not, how Mail Ping works, and how we handle privacy." />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body>
 
@@ -33,7 +40,7 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
       </div>
     </div>
   </div>
@@ -42,12 +49,8 @@
 <main id="main">
   <div class="wrap pageTitle">
     <h1>FAQ</h1>
-    <p>
-      Straight answers. No hype. PostAlert helps reduce missed-letter risk after moving in the UK.
-    </p>
-    <div class="notice">
-      <b>Core rule:</b> We don’t open mail. We don’t forward mail.
-    </div>
+    <p>Straight answers. No hype.</p>
+    <div class="notice"><b>Core rule:</b> We don’t open mail. We don’t forward mail.</div>
   </div>
 
   <section class="prose">
@@ -59,32 +62,20 @@
           <p>No. Redirection forwards mail. PostAlert helps you organise updates, get reminders, and act faster when mail still arrives.</p>
 
           <h2>Do you open letters or see contents?</h2>
-          <p>No. We never request letter contents. We focus on notification and organisation.</p>
+          <p>No. We never request letter contents.</p>
 
           <h2>How does Mail Ping work without sign-up?</h2>
-          <p>The joiner scans a QR and taps notify. No account required. That’s how we maximise real-world usage.</p>
+          <p>The joiner scans a QR and taps notify. No account required.</p>
+
+          <h2>Why can’t I use a QR code yet?</h2>
+          <p>We’re in pilot mode validating demand and refining the flow before issuing QR codes broadly.</p>
 
           <h2>Will PostAlert prevent all missed letters?</h2>
-          <p>No service can guarantee that. PostAlert reduces risk and improves response time. You still need to update your address.</p>
-
-          <h2>Is this GDPR-friendly?</h2>
-          <p>We aim to minimise data and keep flows transparent. Read our <a href="privacy.html">Privacy Policy</a>.</p>
-
-          <h2>Who is this for?</h2>
-          <ul>
-            <li>Renters who move every 6–18 months</li>
-            <li>Students and graduates</li>
-            <li>Busy families</li>
-            <li>Frequent movers (relocation, short lets)</li>
-          </ul>
-
-          <div class="notice">
-            <b>Want to help shape it?</b> Join the pilot or send feedback via <a href="contact.html">Contact</a>.
-          </div>
+          <p>No service can guarantee that. PostAlert reduces risk and improves response time.</p>
 
           <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="index.html#signup">Join pilot</a>
-            <a class="btn" href="mailping.html">Mail Ping</a>
+            <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
+            <a class="btn" href="mailping.html" onclick="plausible('Nav Click', { props: { target: 'mailping' } })">Mail Ping</a>
           </p>
 
         </div>
