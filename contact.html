@@ -7,6 +7,13 @@
   <meta name="description" content="Contact PostAlert for pilot access, partnerships, sponsorship, or feedback." />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body>
 
@@ -33,7 +40,7 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
       </div>
     </div>
   </div>
@@ -42,11 +49,9 @@
 <main id="main">
   <div class="wrap pageTitle">
     <h1>Contact</h1>
-    <p>
-      PostAlert is currently in pilot mode. We welcome feedback from movers, agents, and potential partners.
-    </p>
+    <p>PostAlert is currently in pilot mode. We welcome feedback from movers, agents, and potential partners.</p>
     <div class="notice">
-      <b>Email:</b> <a href="mailto:hello@postalert.co.uk">hello@postalert.co.uk</a>
+      <b>Email:</b> <a href="mailto:hello@postalert.co.uk" onclick="plausible('Email Click', { props: { mailbox: 'hello' } })">hello@postalert.co.uk</a>
     </div>
   </div>
 
@@ -54,30 +59,28 @@
     <div class="wrap">
       <div class="card reveal">
         <div class="cardInner">
-
           <h2 style="margin-top:0;">Send a message</h2>
-          <p>
-          </p>
-
-          <div class="split" style="margin-top:12px;">
-            <div class="notice" style="margin:0;">
-              <b>Pilot access</b><br>
-              Tell us when you’re moving and what worries you most.
-            </div>
-            <div class="notice" style="margin:0;">
-              <b>Partnership</b><br>
-              Letting agent / student housing / relocation service.
-            </div>
-          </div>
+          <p class="muted">Tap a button below. Your email app will open with the subject pre-filled.</p>
 
           <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="mailto:hello@postalert.co.uk?subject=PostAlert%20Pilot%20Access">Email for pilot</a>
-            <a class="btn" href="mailto:hello@postalert.co.uk?subject=PostAlert%20Partnership">Email for partnership</a>
-            <a class="btn" href="index.html#signup">Join pilot</a>
-          </p>
+            <a class="btn primary"
+               href="mailto:hello@postalert.co.uk?subject=PostAlert%20Pilot%20Access"
+               onclick="plausible('Email Click', { props: { mailbox: 'hello', type: 'pilot' } })">
+              Email for pilot
+            </a>
 
-          <div class="notice" style="margin-top:12px;">
-          </div>
+            <a class="btn"
+               href="mailto:hello@postalert.co.uk?subject=PostAlert%20Partnership"
+               onclick="plausible('Email Click', { props: { mailbox: 'hello', type: 'partnership' } })">
+              Email for partnership
+            </a>
+
+            <a class="btn"
+               href="mailto:hello@postalert.co.uk?subject=PostAlert%20Feedback"
+               onclick="plausible('Email Click', { props: { mailbox: 'hello', type: 'feedback' } })">
+              General message
+            </a>
+          </p>
 
         </div>
       </div>
