@@ -1,113 +1,94 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pricing — PostAlert</title>
-  <meta name="description" content="PostAlert pricing for UK movers. Pilot options designed to be cheaper than long-term mail redirection and worth it if it prevents escalation." />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="PostAlert pilot pricing and future plans. Designed to be cheaper than long-term redirection and worth it if it prevents escalation." />
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Plausible -->
   <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
   <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
   </script>
 </head>
+
 <body>
-
-<a href="#main" class="skip-link">Skip to content</a>
-
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.svg" alt="PostAlert logo">
-        <div class="wordmark">
-          <span>Post</span><span class="alert">Alert</span>
-          <small>UK move-safe post alerts</small>
-        </div>
-      </a>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="PostAlert logo">
+      <span>Post<span class="alert">Alert</span></span>
+    </a>
 
-      <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-      </div>
-    </div>
+    <nav>
+      <a class="track-nav" data-target="home" href="index.html">Home</a>
+      <a class="track-nav" data-target="mailping" href="mailping.html">Mail Ping</a>
+      <a class="track-nav" data-target="faq" href="faq.html">FAQ</a>
+      <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
-<main id="main">
-  <div class="wrap pageTitle">
-    <h1>Pricing</h1>
-    <p>
-      We’re in pilot mode. The goal is simple: cheaper than long-term redirection and worth it if it prevents even one escalation.
-    </p>
-    <div class="notice">
-      <b>Note:</b> PostAlert does not forward mail and never opens letters.
+<main class="wrap page">
+  <h1>Pricing</h1>
+  <p>
+    We’re in pilot mode. Pricing will evolve as we validate demand and prove what users value most.
+    The goal is simple: cheaper than long-term redirection and worth it if it prevents even one escalation.
+  </p>
+
+  <div class="notice">
+    <strong>Pilot access:</strong> Right now, joining the pilot is free.
+    Early users help shape the product and get first access when Mail Ping QR testing begins.
+  </div>
+
+  <h2>Planned tiers (subject to change)</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Starter</h3>
+      <p>Checklist + reminders + tracking.</p>
+      <p class="muted">Target: Free / low-cost</p>
+    </div>
+
+    <div class="card">
+      <h3>Plus</h3>
+      <p>Starter + Mail Ping alerts + priority support.</p>
+      <p class="muted">Target: £3–£5/month</p>
+    </div>
+
+    <div class="card">
+      <h3>Family</h3>
+      <p>Multiple household members + shared admin + shared alerts.</p>
+      <p class="muted">Target: £7–£10/month</p>
     </div>
   </div>
 
-  <section class="prose">
-    <div class="wrap">
-      <div class="grid3">
-
-        <div class="feature reveal">
-          <div class="ico">🧾</div>
-          <h3>Starter (Pilot)</h3>
-          <p>Checklist + reminders + tracking.<br><b>Best for:</b> early feedback.</p>
-          <p class="mini" style="margin:10px 0 0;">
-            <b>Pilot access includes:</b> influence on Mail Ping design and priority QR testing when launched.
-          </p>
-        </div>
-
-        <div class="feature reveal delay-1">
-          <div class="ico">📮</div>
-          <h3>Plus (Target £3–£5/mo)</h3>
-          <p>Starter + Mail Ping QR + priority alerts.<br><b>Best for:</b> renters & frequent movers.</p>
-        </div>
-
-        <div class="feature reveal delay-2">
-          <div class="ico">👨‍👩‍👧</div>
-          <h3>Family (Target £7–£10/mo)</h3>
-          <p>Multiple members + shared admin + shared alerts.<br><b>Best for:</b> households.</p>
-        </div>
-
-      </div>
-
-      <p class="formActions" style="margin-top:14px;">
-        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-        <a class="btn" href="partners.html" onclick="plausible('Nav Click', { props: { target: 'partners' } })">Partner with us</a>
-      </p>
-    </div>
-  </section>
+  <p class="formActions">
+    <a class="btn primary join-pilot" href="index.html#signup">Join the pilot</a>
+  </p>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footGrid">
-      <div style="display:flex; gap:10px; align-items:flex-start;">
-        <img src="logo.svg" alt="PostAlert logo" width="28" height="28" style="border-radius:10px; opacity:.95;">
-        <div>PostAlert © <span id="year"></span><br>Built in the UK · Privacy-first</div>
-      </div>
-      <div class="footLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+    <p>PostAlert © <span id="year"></span></p>
   </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function track(name, props) {
+    if (window.plausible) plausible(name, props ? { props } : undefined);
+  }
+
+  document.querySelector(".join-pilot")?.addEventListener("click", () => track("Join Pilot Click"));
+
+  document.querySelectorAll(".track-nav").forEach(link => {
+    link.addEventListener("click", () => track("Nav Click", { target: link.dataset.target || link.getAttribute("href") }));
+  });
+</script>
 </body>
 </html>
