@@ -1,116 +1,73 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — PostAlert</title>
-  <meta name="description" content="PostAlert privacy policy. How we handle personal data, pilot signups, and Mail Ping notifications." />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="PostAlert privacy policy. Privacy-first approach: no opening letters, no storing contents, minimal analytics." />
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
+  </script>
 </head>
+
 <body>
-
-<a href="#main" class="skip-link">Skip to content</a>
-
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.svg" alt="PostAlert logo">
-        <div class="wordmark">
-          <span>Post</span><span class="alert">Alert</span>
-          <small>UK move-safe post alerts</small>
-        </div>
-      </a>
-
-      <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
-      </div>
-    </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="PostAlert logo">
+      <span>Post<span class="alert">Alert</span></span>
+    </a>
   </div>
 </header>
 
-<main id="main">
-  <div class="wrap pageTitle">
-    <h1>Privacy Policy</h1>
-    <p>
-      PostAlert is designed to minimise data and keep the experience transparent. This policy explains what we collect and why.
-    </p>
-    <div class="notice">
-      <b>Core promise:</b> We do not open mail and we never ask anyone to share letter contents.
-    </div>
-  </div>
+<main class="wrap page">
+  <h1>Privacy Policy</h1>
 
-  <section class="prose">
-    <div class="wrap">
-      <div class="card reveal">
-        <div class="cardInner">
+  <p>
+    PostAlert is built to be privacy-first. We do not open letters. We do not store letter contents.
+    We only collect what we need to run the pilot and improve the service.
+  </p>
 
-          <h2 style="margin-top:0;">What we collect</h2>
-          <ul>
-            <li><b>Pilot signups:</b> email and basic survey answers you submit.</li>
-            <li><b>Contact emails:</b> messages you send to our contact address.</li>
-          </ul>
+  <h2>What we collect</h2>
+  <ul>
+    <li>Pilot signup information you submit (e.g., email, moving status)</li>
+    <li>Basic website analytics via Plausible (privacy-friendly, no cookies)</li>
+  </ul>
 
-          <h2>What we don’t collect</h2>
-          <ul>
-            <li>We do not request or store letter contents.</li>
-            <li>We do not ask anyone to open mail.</li>
-            <li>We do not sell personal data.</li>
-          </ul>
+  <h2>What we do NOT collect</h2>
+  <ul>
+    <li>Letter contents</li>
+    <li>Photos of letters or envelopes</li>
+    <li>Bank details</li>
+  </ul>
 
-          <h2>Mail Ping</h2>
-          <p>
-            Mail Ping is designed as a notification flow. The goal is to notify the leaver that mail arrived and encourage them to update the sender.
-          </p>
+  <h2>Analytics</h2>
+  <p>
+    We use Plausible to understand what pages people visit and what they click, so we can improve the website.
+    Plausible is privacy-friendly and does not use cookies.
+  </p>
 
-          <h2>Third-party services</h2>
-          <p>
-            During pilot we may use third-party services such as Tally (form provider) to collect submissions.
-            Your submission is processed according to their policies as well.
-          </p>
-
-          <h2>Your rights</h2>
-          <p>
-            You can request deletion of your pilot signup details by emailing
-            <a href="mailto:hello@postalert.co.uk">hello@postalert.co.uk</a>.
-          </p>
-
-          <div class="notice">
-            <b>Questions?</b> Contact us at <a href="mailto:hello@postalert.co.uk">hello@postalert.co.uk</a>.
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
+  <p class="formActions">
+    <a class="btn primary join-pilot" href="index.html#signup">Join the pilot</a>
+  </p>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footGrid">
-      <div style="display:flex; gap:10px; align-items:flex-start;">
-        <img src="logo.svg" alt="PostAlert logo" width="28" height="28" style="border-radius:10px; opacity:.95;">
-        <div>PostAlert © <span id="year"></span><br>Built in the UK · Privacy-first</div>
-      </div>
-      <div class="footLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+    <p>PostAlert © <span id="year"></span></p>
   </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelector(".join-pilot")?.addEventListener("click", () => {
+    if (window.plausible) plausible("Join Pilot Click");
+  });
+</script>
 </body>
 </html>
