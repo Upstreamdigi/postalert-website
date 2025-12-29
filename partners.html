@@ -4,9 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>For Agents & Partners — PostAlert</title>
-  <meta name="description" content="PostAlert partnerships for letting agents, property managers, student housing and relocation services. Reduce move-in friction and missed post issues." />
+  <meta name="description" content="PostAlert partnerships for letting agents, property managers, student housing and relocation services." />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body>
 
@@ -33,7 +40,7 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
       </div>
     </div>
   </div>
@@ -42,75 +49,32 @@
 <main id="main">
   <div class="wrap pageTitle">
     <h1>For Agents & Partners</h1>
-    <p>
-      PostAlert improves the move-in experience by reducing missed-letter risk and “old tenant mail” friction.
-      It’s a simple add-on you can include in your move-in pack in under 30 seconds.
-    </p>
-
-    <div class="notice">
-      <b>Designed for real behaviour:</b> We don’t rely on people returning mail. We make the right action easy.
-    </div>
+    <p>Reduce move-in friction and the “old tenant mail” problem with a lightweight, privacy-first add-on.</p>
+    <div class="notice"><b>Pilot:</b> We’re validating with early users and refining Mail Ping before scaling.</div>
   </div>
 
   <section class="prose">
     <div class="wrap">
-
-      <div class="grid3">
-        <div class="feature reveal">
-          <div class="ico">🏠</div>
-          <h3>Letting agents</h3>
-          <p>Improve tenant experience and reduce “post confusion” complaints after move-in.</p>
-        </div>
-
-        <div class="feature reveal delay-1">
-          <div class="ico">🧰</div>
-          <h3>Property managers</h3>
-          <p>Reduce admin around old-occupant letters and awkward handover issues.</p>
-        </div>
-
-        <div class="feature reveal delay-2">
-          <div class="ico">🎓</div>
-          <h3>Student housing</h3>
-          <p>High churn. High value. QR onboarding works well for students.</p>
-        </div>
-      </div>
-
-      <div class="card reveal" style="margin-top:14px;">
+      <div class="card reveal">
         <div class="cardInner">
-          <h2 style="margin-top:0;">How the pilot partnership works</h2>
+          <h2 style="margin-top:0;">Why agents care</h2>
           <ul>
-            <li>You include a PostAlert QR flyer/card in your keys handover pack</li>
-            <li>Tenants join the pilot and use checklist + reminders + Mail Ping</li>
-            <li>We share learnings and refine for a scalable agent pack</li>
+            <li>Better move-in experience</li>
+            <li>Less tenant friction over mail</li>
+            <li>A modern “care factor” in your handover pack</li>
           </ul>
 
           <div class="notice">
-            During pilot, Mail Ping is tested manually before automation and QR rollout to ensure reliability at scale.
-          </div>
-
-          <div class="split" style="margin-top:12px;">
-            <div class="notice" style="margin:0;">
-              <b>Option A: Referral</b><br>
-              Earn per activation during pilot.
-            </div>
-            <div class="notice" style="margin:0;">
-              <b>Option B: Co-branding</b><br>
-              Flyers carry your logo: “Powered by PostAlert”.
-            </div>
-          </div>
-
-          <div class="notice" style="margin-top:12px;">
-            <b>Important:</b> PostAlert does not open mail and does not forward mail.
-            We provide organisation, reminders, and optional Mail Ping notifications.
+            During pilot, Mail Ping is tested manually before automation and wider QR rollout.
           </div>
 
           <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="contact.html">Contact for partnership</a>
-            <a class="btn" href="mailping.html">See Mail Ping</a>
+            <a class="btn primary" href="contact.html" onclick="plausible('Nav Click', { props: { target: 'contact' } })">Talk partnership</a>
+            <a class="btn" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
           </p>
+
         </div>
       </div>
-
     </div>
   </section>
 </main>
