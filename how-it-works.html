@@ -31,16 +31,16 @@
       </a>
 
       <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <a class="track-nav" data-target="how-it-works" href="how-it-works.html">How it works</a>
+        <a class="track-nav" data-target="mailping" href="mailping.html">Mail Ping</a>
+        <a class="track-nav" data-target="pricing" href="pricing.html">Pricing</a>
+        <a class="track-nav" data-target="partners" href="partners.html">For Agents</a>
+        <a class="track-nav" data-target="faq" href="faq.html">FAQ</a>
+        <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
+        <a class="btn primary join-pilot" href="index.html#signup">Join pilot</a>
       </div>
     </div>
   </div>
@@ -89,8 +89,8 @@
           </ul>
 
           <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join the pilot</a>
-            <a class="btn" href="mailping.html" onclick="plausible('Nav Click', { props: { target: 'mailping' } })">Explore Mail Ping</a>
+            <a class="btn primary join-pilot" href="index.html#signup">Join the pilot</a>
+            <a class="btn track-nav" data-target="mailping" href="mailping.html">Explore Mail Ping</a>
           </p>
 
         </div>
@@ -107,14 +107,23 @@
         <div>PostAlert © <span id="year"></span><br>Built in the UK · Privacy-first</div>
       </div>
       <div class="footLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
+        <a class="track-nav" data-target="privacy" href="privacy.html">Privacy</a>
+        <a class="track-nav" data-target="terms" href="terms.html">Terms</a>
+        <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function track(eventName, props) {
+    if (window.plausible) plausible(eventName, props ? { props } : undefined);
+  }
+  document.querySelectorAll(".join-pilot").forEach(btn => btn.addEventListener("click", () => track("Join Pilot Click")));
+  document.querySelectorAll(".track-nav").forEach(link => link.addEventListener("click", () => track("Nav Click", { target: link.dataset.target || link.getAttribute("href") })));
+</script>
+
 </body>
 </html>
