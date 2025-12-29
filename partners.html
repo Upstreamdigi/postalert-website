@@ -1,100 +1,84 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>For Agents & Partners — PostAlert</title>
   <meta name="description" content="PostAlert partnerships for letting agents, property managers, student housing and relocation services." />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
 
-  <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Plausible -->
   <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
   <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
   </script>
 </head>
+
 <body>
-
-<a href="#main" class="skip-link">Skip to content</a>
-
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.svg" alt="PostAlert logo">
-        <div class="wordmark">
-          <span>Post</span><span class="alert">Alert</span>
-          <small>UK move-safe post alerts</small>
-        </div>
-      </a>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="PostAlert logo">
+      <span>Post<span class="alert">Alert</span></span>
+    </a>
 
-      <nav class="navlinks">
-        <a href="how-it-works.html">How it works</a>
-        <a href="mailping.html">Mail Ping</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="partners.html">For Agents</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-      </div>
-    </div>
+    <nav>
+      <a class="track-nav" data-target="home" href="index.html">Home</a>
+      <a class="track-nav" data-target="how-it-works" href="how-it-works.html">How it works</a>
+      <a class="track-nav" data-target="contact" href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
-<main id="main">
-  <div class="wrap pageTitle">
-    <h1>For Agents & Partners</h1>
-    <p>Reduce move-in friction and the “old tenant mail” problem with a lightweight, privacy-first add-on.</p>
-    <div class="notice"><b>Pilot:</b> We’re validating with early users and refining Mail Ping before scaling.</div>
+<main class="wrap page">
+  <h1>For Agents & Partners</h1>
+  <p>
+    PostAlert helps reduce “old tenant mail” friction and improves move-in experience with a privacy-first approach.
+  </p>
+
+  <div class="notice">
+    <strong>Pilot:</strong> We’re validating the product with early users and refining Mail Ping before scaling.
   </div>
 
-  <section class="prose">
-    <div class="wrap">
-      <div class="card reveal">
-        <div class="cardInner">
-          <h2 style="margin-top:0;">Why agents care</h2>
-          <ul>
-            <li>Better move-in experience</li>
-            <li>Less tenant friction over mail</li>
-            <li>A modern “care factor” in your handover pack</li>
-          </ul>
+  <h2>Why agents care</h2>
+  <ul>
+    <li>Better move-in experience</li>
+    <li>Less tenant friction over mail</li>
+    <li>A modern “care factor” added to your handover pack</li>
+  </ul>
 
-          <div class="notice">
-            During pilot, Mail Ping is tested manually before automation and wider QR rollout.
-          </div>
+  <h2>How a partnership could work</h2>
+  <ol>
+    <li>Include a PostAlert flyer/QR card inside the keys handover pack</li>
+    <li>Tenants join the pilot and follow the checklist</li>
+    <li>Later, selected users test Mail Ping QR notifications</li>
+  </ol>
 
-          <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="contact.html" onclick="plausible('Nav Click', { props: { target: 'contact' } })">Talk partnership</a>
-            <a class="btn" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </section>
+  <p class="formActions">
+    <a class="btn primary track-nav" data-target="contact" href="contact.html">Talk partnership</a>
+    <a class="btn join-pilot" href="index.html#signup">Join pilot</a>
+  </p>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footGrid">
-      <div style="display:flex; gap:10px; align-items:flex-start;">
-        <img src="logo.svg" alt="PostAlert logo" width="28" height="28" style="border-radius:10px; opacity:.95;">
-        <div>PostAlert © <span id="year"></span><br>Built in the UK · Privacy-first</div>
-      </div>
-      <div class="footLinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+    <p>PostAlert © <span id="year"></span></p>
   </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function track(name, props) {
+    if (window.plausible) plausible(name, props ? { props } : undefined);
+  }
+
+  document.querySelector(".join-pilot")?.addEventListener("click", () => track("Join Pilot Click"));
+
+  document.querySelectorAll(".track-nav").forEach(link => {
+    link.addEventListener("click", () => track("Nav Click", { target: link.dataset.target || link.getAttribute("href") }));
+  });
+</script>
 </body>
 </html>
