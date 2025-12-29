@@ -7,6 +7,13 @@
   <meta name="description" content="PostAlert pricing for UK movers. Pilot options designed to be cheaper than long-term mail redirection and worth it if it prevents escalation." />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-WT4CJP3Y3_erNNtttdFxr.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body>
 
@@ -33,7 +40,7 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="index.html#signup">Join pilot</a>
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
       </div>
     </div>
   </div>
@@ -43,11 +50,10 @@
   <div class="wrap pageTitle">
     <h1>Pricing</h1>
     <p>
-      We’re in pilot mode. Pricing is being validated with early users — but the aim is simple:
-      <b>cheaper than long-term redirection</b> and worth it if it prevents even one escalation.
+      We’re in pilot mode. The goal is simple: cheaper than long-term redirection and worth it if it prevents even one escalation.
     </p>
     <div class="notice">
-      <b>Note:</b> PostAlert does not forward mail. It helps you organise updates, get reminders, and act faster when mail still arrives.
+      <b>Note:</b> PostAlert does not forward mail and never opens letters.
     </div>
   </div>
 
@@ -58,54 +64,30 @@
         <div class="feature reveal">
           <div class="ico">🧾</div>
           <h3>Starter (Pilot)</h3>
-          <p>
-            Checklist + reminders + tracking.<br>
-            <b>Best for:</b> trying the idea and giving feedback.
-          </p>
+          <p>Checklist + reminders + tracking.<br><b>Best for:</b> early feedback.</p>
           <p class="mini" style="margin:10px 0 0;">
-            <b>Pilot access includes:</b> early feature access, influence on Mail Ping design, and priority QR testing when launched.
+            <b>Pilot access includes:</b> influence on Mail Ping design and priority QR testing when launched.
           </p>
         </div>
 
         <div class="feature reveal delay-1">
           <div class="ico">📮</div>
           <h3>Plus (Target £3–£5/mo)</h3>
-          <p>
-            Starter + Mail Ping QR + priority alerts.<br>
-            <b>Best for:</b> renters and frequent movers.
-          </p>
+          <p>Starter + Mail Ping QR + priority alerts.<br><b>Best for:</b> renters & frequent movers.</p>
         </div>
 
         <div class="feature reveal delay-2">
           <div class="ico">👨‍👩‍👧</div>
           <h3>Family (Target £7–£10/mo)</h3>
-          <p>
-            Multiple members + shared checklist + shared alerts.<br>
-            <b>Best for:</b> households managing admin together.
-          </p>
+          <p>Multiple members + shared admin + shared alerts.<br><b>Best for:</b> households.</p>
         </div>
 
       </div>
 
-      <div class="card reveal" style="margin-top:14px;">
-        <div class="cardInner">
-          <h2 style="margin-top:0;">Agent Pack (Partner pricing)</h2>
-          <p>
-            For letting agents, property managers, student housing and relocation services.
-            PostAlert can be included in move-in packs to improve tenant experience and reduce post-related friction.
-          </p>
-
-          <div class="notice">
-            <b>Partnership options:</b> referral fee per activation · co-branded flyers · portfolio pilot.
-          </div>
-
-          <p class="formActions" style="margin-top:14px;">
-            <a class="btn primary" href="partners.html">For Agents</a>
-            <a class="btn" href="index.html#signup">Join pilot</a>
-          </p>
-        </div>
-      </div>
-
+      <p class="formActions" style="margin-top:14px;">
+        <a class="btn primary" href="index.html#signup" onclick="plausible('Join Pilot Click')">Join pilot</a>
+        <a class="btn" href="partners.html" onclick="plausible('Nav Click', { props: { target: 'partners' } })">Partner with us</a>
+      </p>
     </div>
   </section>
 </main>
